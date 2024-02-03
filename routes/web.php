@@ -20,4 +20,4 @@ Route::get("/", [HomeController::class, 'index'])->name("home");
 Route::get("/login", [SessionController::class, 'index'])->name("login");
 Route::post("/login", [SessionController::class, 'login'])->name("userLogin");
 Route::post("/register", [SessionController::class, 'register'])->name("userRegister");
-Route::get("/logout", [SessionController::class, 'logout'])->name("logout");
+Route::post("/logout", [SessionController::class, 'logout'])->name("logout");

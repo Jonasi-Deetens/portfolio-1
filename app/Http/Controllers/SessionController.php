@@ -11,7 +11,10 @@ class SessionController extends Controller
 {
     public function index()
     {
-        return view('authentication.login');
+        if(auth()->check())
+            return redirect()->route('home');
+        else
+            return view('authentication.login');
     }
 
     public function login(LoginRequest $request)
