@@ -31,11 +31,20 @@
             <form action="{{ route('userRegister') }}" method="POST">
                 @csrf
                 <label for="registerUsername">Username:</label><br>
-                <input type="text" name="registerUsername" id="registerUsername" required><br>
+                <input type="text" name="registerUsername" id="registerUsername" value="{{ old('registerUsername') }}" required><br>
+                @if($errors->has('registerUsername'))
+                <p class="error">{{ $errors->first('registerUsername') }}</p>
+                @endif
                 <label for="registerEmail">Email:</label><br>
-                <input type="email" name="registerEmail" id="registerEmail" required><br>
+                <input type="email" name="registerEmail" id="registerEmail" value="{{ old('registerEmail') }}" required><br>
+                @if($errors->has('registerEmail'))
+                <p class="error">{{ $errors->first('registerEmail') }}</p>
+                @endif
                 <label for="registerPassword">Password:</label><br>
                 <input type="password" name="registerPassword" id="registerPassword" required><br>
+                @if($errors->has('registerPassword'))
+                <p class="error">{{ $errors->first('registerPassword') }}</p>
+                @endif
                 <label for="registerPassword_confirmation">Confirm Password:</label><br>
                 <input type="password" name="registerPassword_confirmation" id="registerPassword_confirmation" required><br>
                 <input type="submit" value="Register">
