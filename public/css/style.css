@@ -1,5 +1,8 @@
 * {
     box-sizing: border-box;
+}
+
+h1, h2, h3, li, a, .header-title { 
     font-family: "Indie Flower", cursive;
     font-weight: 400;
     font-style: normal;
@@ -23,6 +26,21 @@ form>input {
     justify-content: space-evenly;
     align-items: center;
     padding: 70px;
+}
+
+.half-line {
+    width: 50%;
+    margin: auto;
+}
+
+.link {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.link:hover {
+    color: rgb(235, 2, 200);
 }
 
 .header {
